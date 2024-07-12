@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import icon2 from '/src/assets/icon2.svg'
-import maps from '/src/assets/mapsGg.svg'
+import icon2 from '/images/icon2.svg'
+import maps from '/images/mapsGg.svg'
 
 export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, location, openGuests, modal2,
   setModal2, persons, setPersons, setEffect, effect }) => {

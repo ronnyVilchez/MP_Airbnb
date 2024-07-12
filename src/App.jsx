@@ -1,7 +1,7 @@
 
 import './App.css'
 import array from './assets/stays.json'
-import search from './assets/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg'
+import search from '/images/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg'
 import { Cards } from './components/Cards';
 import { Nav } from './components/Nav';
 import { Header } from './components/Header';

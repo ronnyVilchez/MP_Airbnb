@@ -12,15 +12,6 @@ arrayFilter = persons ? arrayFilter.filter(array=> array.maxGuests >= persons) :
  setCards(arrayFilter)
 },[location,persons])
 
-/* 
-  useEffect(()=> {
-
-const arrayFilter = persons ? array.filter(array=> array.maxGuests >= persons) : array 
-
-
- setCards(arrayFilter)
-},[persons]) */
-
   return (
     <div className="cards">
     {
