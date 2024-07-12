@@ -48,7 +48,7 @@ export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, l
 
   }
 
-function opened(params) {
+function opened() {
   setModal(true)
 }
 
@@ -66,8 +66,6 @@ if(e.target.tagName !== 'BUTTON')
     setGuest(false)
   /*   setModal(true) */
   }
-
-
 
   return (
 

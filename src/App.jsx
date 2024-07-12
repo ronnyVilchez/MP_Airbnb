@@ -48,8 +48,6 @@ function App() {
       </Header>
       <Title
         cards={cards}
-       
-
       />
       <Cards
         array={array}
