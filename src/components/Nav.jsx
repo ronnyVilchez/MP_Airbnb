@@ -48,16 +48,23 @@ export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, l
 
   }
 
+function opened(params) {
+  setModal(true)
+}
 
-  function openMdI() {
-    setGuest(true)
-    setLot(false)
-    setModal(true)
+  function openMdI(e) {
+
+if(e.target.tagName !== 'BUTTON')
+   { setLot(false)
+    guest ? setGuest(false) : setGuest(true)}
+
+   /*  setModal(true) */
   }
   function openMdL() {
-    setLot(true)
+    lot ? setLot(false) : setLot(true)
+
     setGuest(false)
-    setModal(true)
+  /*   setModal(true) */
   }
 
 
@@ -70,13 +77,13 @@ export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, l
       (<nav className='nav '>
         < div className='divLocation' >
 
-          <input id='in1' className='in1' value={location} type="text" placeholder='Add location' readOnly onClick={openMdL} required />
+          <input id='in1' className='in1' value={location} type="text" placeholder='Add location' readOnly onClick={opened} required />
         </div >
 
 
         <div className="divGuests">
 
-          <input type="text" id='in2' className='in2' value={(persons === 0 ? '' : persons)} placeholder='Add guests' readOnly onClick={openMdI} />
+          <input type="text" id='in2' className='in2' value={(persons === 0 ? '' : `${persons} guest` )} placeholder='Add guests' readOnly onClick={opened} />
         </div>
         <button onClick={searchStays} className='search' > <img src={icon} alt="search" /></button>
 
@@ -84,8 +91,8 @@ export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, l
 
       :
       (<nav className='navActive'>
-        <div className='divLocationActive'>
-          <div className='inputL'>
+        <div className='divLocationActive'  >
+          <div className='inputL' onClick={openMdL} >
             <label htmlFor="in1">LOCATION</label>
             <input id='in1' className='in1Active' value={location} type="text" placeholder='Add location' onChange={inputChangeLocation} />
           </div>
@@ -98,10 +105,10 @@ export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, l
             </div>}
         </div>
 
-        <div className="divGuestsActive">
-          <div className="inputG">
+        <div className="divGuestsActive" >
+          <div className="inputG" onClick={openMdI}  >
             <label htmlFor="in2">GUESTS</label>
-            <input type="text" id='in2' className='in2Active' value={(persons === 0 ? '' : `${persons} guests`)} placeholder='Add guests' onChange={inputChangeGuest} />
+            <input type="text" id='in2' className='in2Active' value={(persons === 0 ? '' : `${persons} guest` )} placeholder='Add guests' onChange={inputChangeGuest} readOnly/>
           </div>
           {guest &&
             <div className="guests">
@@ -110,7 +117,7 @@ export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, l
                 <input type="text" id='adult' className='in2' placeholder='Age 13 or above' disabled />
 
                 <div className='buttons'>
-                  <button onClick={() => setAdult(adult - 1)}>-</button>
+                  <button onClick={() => (adult >0) ? setAdult(adult - 1): setAdult(0)}>-</button>
                   <span>{adult}</span>
                   <button onClick={() => setAdult(adult + 1)}>+</button>
                 </div>
@@ -121,7 +128,7 @@ export const Nav = ({ icon, array, openLocation, modal, setModal, setLocation, l
                 <input type="text" id='children' className='in2' placeholder='Age 2-12' disabled />
 
                 <div className='buttons'>
-                  <button onClick={() => setChildrens(childrens - 1)}>-</button>
+                  <button onClick={() => (childrens >0) ? setChildrens(childrens - 1): setChildrens(0)}>-</button>
                   <span>{childrens}</span>
                   <button onClick={() => setChildrens(childrens + 1)}>+</button>
                 </div>

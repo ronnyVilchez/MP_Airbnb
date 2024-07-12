@@ -39,8 +39,7 @@ button,
 img {
   display: flex;
   text-align: center;
-
-
+  cursor: pointer;
 
 }
 
@@ -172,6 +171,7 @@ border: none;
   gap: 1rem;
   width: 100%;
   font-weight: bold;
+
 }
 
 .in1Active,.in2Active {
@@ -187,9 +187,12 @@ border: none;
   border-radius: 10px;
   padding: .8rem;
   height: 60px;
+  cursor: pointer;
  
 }
-
+.inputL label{
+  width: fit-content;
+}
 .locations {
 
   display: flex;
@@ -202,6 +205,7 @@ border: none;
 .locations span{
   display: flex;
   height: 20px;
+  cursor: pointer;
 }
 .divGuestsActive {
   display: flex;
@@ -209,18 +213,23 @@ border: none;
   width: 100%;
   font-weight: bold;
   gap: 1rem;
+ 
+
 }
 
 .inputG {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
  
   padding: .8rem;
   height: 60px;
   box-shadow: rgba(139, 138, 138, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
 }
-
+.inputG label{
+  width: fit-content;
+}
 .guests {
   display: flex;
   padding: .8rem;
@@ -331,6 +340,7 @@ border-radius: 20px;
   place-content: center;
   gap: 2.2rem 1.4rem;
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
   padding: 2rem;
 
 }
@@ -351,6 +361,7 @@ border-radius: 20px;
 .info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .shost {

@@ -47,8 +47,8 @@ function App() {
         />
       </Header>
       <Title
-        array={array}
-        location={location}
+        cards={cards}
+       
 
       />
       <Cards

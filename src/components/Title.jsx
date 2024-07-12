@@ -1,12 +1,10 @@
 import React from 'react'
 
-export const Title = ({array,location}) => {
-  
-  const arrayFilter = location ? array.filter(array=> array.city === location) : array
- 
+export const Title = ({cards}) => {
+   
   return (
     <div className="title">
-    <span className='tp'>Stays in Finland</span> <span className='numbers'>{arrayFilter.length>12 ? '12+ Stays': `${arrayFilter.length} Stays`}</span>
+    <span className='tp'>Stays in Finland</span> <span className='numbers'>{cards.length>12 ? '12+ Stays': `${cards.length} Stays`}</span>
   </div>
   )
 }

@@ -31,10 +31,10 @@ cards.map
       <img src={array.photo} alt="imagen de apartamente" />
     </div>
     <div className='info'>
-      {array.superHost && <span className='shost' >SUPER HOST</span>}
+      {array.superHost && <span className='shost' ><strong>SUPER HOST</strong></span>}
       <span>{array.type}</span>
       {array.beds && <span> {array.beds} beds</span>}
-      <span> ⭐{array.rating}</span>
+      <span> ⭐ {array.rating}</span>
     </div>
     <div className="description"> {array.title}</div>
   </div>
