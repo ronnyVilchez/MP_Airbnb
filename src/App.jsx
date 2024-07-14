@@ -11,39 +11,21 @@ import { useState } from 'react';
 function App() {
 
   const [modal, setModal] = useState(false)
-  const [modal2, setModal2] = useState(false)
   const [location, setLocation] = useState('')
   const [persons, setPersons] = useState(0)
-  const [effect, setEffect] = useState(false)
   const [cards, setCards] = useState([array])
-
-
-
-  function openLocation() {
-    setModal(!modal)
-  }
-  function openGuests() {
-    setModal2(!modal2)
-  }
 
   return (
     <>
       <Header>
         <Nav
           icon={search}
-          array={array}
-          openLocation={openLocation}
           modal={modal}
           setModal={setModal}
           setLocation={setLocation}
           location={location}
-          openGuests={openGuests}
-          modal2={modal2}
-          setModal2={setModal2}
           persons={persons}
           setPersons={setPersons}
-          setEffect={setEffect}
-          effect={effect}
         />
       </Header>
       <Title
@@ -53,7 +35,6 @@ function App() {
         array={array}
         location={location}
         persons={persons}
-        effect={effect}
         cards={cards}
         setCards={setCards}
       />
